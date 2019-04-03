@@ -1,0 +1,15 @@
+[entryPoints]
+  [entryPoints.http]
+  address = ":80"
+  [entryPoints.https]
+  address = ":443"
+    [entryPoints.https.tls]
+
+[acme]
+storage = "acme.json"
+entryPoint = "https"
+  [acme.httpChallenge]
+    entryPoint = "http"
+
+[[acme.domains]]
+  main = "chat.style-pen.cf"

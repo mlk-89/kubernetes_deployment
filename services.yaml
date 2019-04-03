@@ -1,0 +1,20 @@
+  apiVersion: v1
+  kind: Service
+  metadata:
+    labels:
+      component: apiserver
+      provider: kubernetes
+    name: kubernetes
+    namespace: default
+    resourceVersion: "35"
+    selfLink: /api/v1/namespaces/default/services/kubernetes
+    uid: bb460ef9-edaf-11e8-940e-5254000bb1d6
+  spec:
+    ClusterIP: 
+    type: NodePort
+    ports:
+      - port: 8443
+        nodePort: 30036
+        name: http
+  status:
+    loadBalancer: {}
